@@ -116,7 +116,9 @@ function Solutions() {
 
 function WorkWithUs() {
   const [submitted, setSubmitted] = React.useState(false);
-  function onSubmit(e){ e.preventDefault(); setSubmitted(true); setTimeout(()=>setSubmitted(false), 4000); }
+  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+  e.preventDefault();
+  setSubmitted(true); setTimeout(()=>setSubmitted(false), 4000); }
   return (
     <section id="work-with-us" className="section">
       <div className="container">
